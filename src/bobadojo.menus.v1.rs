@@ -19,4 +19,5 @@ pub struct Menu {
     pub description: ::prost::alloc::string::String,
 }
 include!("bobadojo.menus.v1.tonic.rs");
+include!("bobadojo.menus.v1.serde.rs");
 // @@protoc_insertion_point(module)

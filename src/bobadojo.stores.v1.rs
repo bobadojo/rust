@@ -120,4 +120,5 @@ pub struct ListStoresResponse {
     pub next_page_token: ::prost::alloc::string::String,
 }
 include!("bobadojo.stores.v1.tonic.rs");
+include!("bobadojo.stores.v1.serde.rs");
 // @@protoc_insertion_point(module)
