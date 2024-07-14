@@ -1,4 +1,4 @@
-APIS=$(shell find ../apis/bobadojo -name "*.proto")
+APIS=$(shell find apis/bobadojo -name "*.proto")
 
 all:	rpc 
 	cargo build --all
@@ -8,5 +8,7 @@ clean:
 
 
 rpc:
-	protoc ${APIS} -I ../apis --prost_out=src --tonic_out=src --prost-serde_out=src --prost-crate_out=gen_crate=Cargo.template:. 
+	git submodule init
+	git submodule update
+	protoc ${APIS} -I apis --prost_out=src --tonic_out=src --prost-serde_out=src --prost-crate_out=gen_crate=Cargo.template:. 
 
